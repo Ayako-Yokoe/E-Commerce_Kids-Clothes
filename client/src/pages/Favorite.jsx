@@ -96,8 +96,6 @@ const ProductName = styled.span`
     margin-bottom: 0.5rem;
     ${mobile({ fontSize: 16 })}
 `
-const ProductId = styled.span``
-
 const ProductColor = styled.div`
     width: 15px;
     height: 15px;

@@ -7,6 +7,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import styled from 'styled-components';
 
+
 const Detail = styled.span`
     color: var(--gray);
 `
@@ -39,7 +40,7 @@ const AdminProductCard = (props) => {
         <Card style={{ maxWidth: 250, margin: 5 }}>
             <CardMedia
                 image={props.img}
-                onClick={() => navigate('admin/product/' + props._id)}
+                onClick={() => navigate('/adminproduct/' + props._id)}
                 component='img'
                 style={{ height: 250, width: 250, objectFit: 'cover' }}
             />

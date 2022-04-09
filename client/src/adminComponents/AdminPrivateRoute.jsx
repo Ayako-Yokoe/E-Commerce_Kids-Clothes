@@ -1,12 +1,12 @@
-import { useSelector } from 'react-redux'
-import { Navigate, Outlet } from 'react-router-dom'
+import { useSelector } from 'react-redux';
+import { Navigate, Outlet } from 'react-router-dom';
 
 
 const AdminPrivateRoute = () => {
-    const user = useSelector(state => state.user.currentUser)
+    const admin = useSelector(state => state.admin.currentAdmin)
 
   return (
-    user ? <Outlet /> : <Navigate to='/adminlogin' />
+    admin ? <Outlet /> : <Navigate to='/adminlogin' />
   )
 }
 

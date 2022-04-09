@@ -135,7 +135,7 @@ const Register = () => {
           {error && <Error>Something went wrong</Error>}
           
           <Link to='/login' style={{ textDecoration: 'none', color: '#0d0d0d'}}>
-            <ToLogin>Already have an account</ToLogin>
+            <ToLogin>Already Have An Account</ToLogin>
           </Link>
       </Wrapper>
     </Container>

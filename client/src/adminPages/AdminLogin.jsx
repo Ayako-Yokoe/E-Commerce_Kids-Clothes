@@ -95,6 +95,10 @@ const AdminLogin = () => {
         </Form>
         {error && <Error>Something went wrong</Error>}
 
+        <Link to='/adminregister' style={{ textDecoration: 'none', color: '#0d0d0d'}}>
+                <ToLink>Create A New Admin Account</ToLink>
+            </Link>
+
         <Link to='/login' style={{ textDecoration: 'none', color: '#0d0d0d'}}>
           <ToLink>Not An Admin</ToLink>
         </Link>

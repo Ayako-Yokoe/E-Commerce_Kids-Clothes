@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-scroll';
 import { sliderItems } from '../data';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';

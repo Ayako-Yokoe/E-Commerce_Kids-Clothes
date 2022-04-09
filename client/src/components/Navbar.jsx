@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import ClosableDrawer from './ClosableDrawer';
@@ -91,7 +91,7 @@ const Navbar = () => {
     useEffect(() => {
         search &&
         navigate(`/products/${search}`)
-    }, [search])
+    }, [search, navigate])
 
 
   return (

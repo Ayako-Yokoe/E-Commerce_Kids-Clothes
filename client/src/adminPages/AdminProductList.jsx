@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProducts } from '../redux/apiCalls';
 import AdminNavbar from '../adminComponents/AdminNavbar';
-import AdminProductCard from '../adminComponents/AdminProductCard'
+import AdminProductCard from '../adminComponents/AdminProductCard';
 import styled from 'styled-components';
 import { mobile } from '../responsive';
 
