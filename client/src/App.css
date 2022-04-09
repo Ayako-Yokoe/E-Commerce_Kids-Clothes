@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Griffy&display=swap');
+
+
+:root {
+  --orange: #ef9273;
+  --pink: #fef9f8;
+  --black: #0d0d0d;
+  --white: #fff7f7;
+  --gray: #616161;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: #fef9f8;
+  color: #0d0d0d;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* 
+dark purple #5f2c3e
+purple      #d1adcc
+mint        #c2d2bd
+orange      #c65032
+white       #f6e9d7 
+*/
+
+/* 
+orange  #ef9273
+pink    #fef9f8
+black   #0d0d0d 
+*/
+
