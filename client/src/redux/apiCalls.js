@@ -1,4 +1,4 @@
-import { publicRequest } from '../requestMethods';
+import { publicRequest } from '../requestMethods'
 import { 
     loginStart, 
     loginSuccess, 
@@ -30,16 +30,12 @@ import {
     addProductFailure
 } from './productRedux'
 
-import axios from 'axios'
-
 
 // User
 export const login = async (dispatch, user) => {
     dispatch(loginStart())
     try {
         const res = await publicRequest.post('/auth/login', user)
-        //const res = await axios.post('/auth/login', user)
-        //const res = await post('/auth/login', user)
         dispatch(loginSuccess(res.data))
         window.location.href = '/'
     } catch(err) {
