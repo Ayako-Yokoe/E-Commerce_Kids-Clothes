@@ -30,8 +30,6 @@ app.use('/api/checkout', stripeRoute)
 app.use('/api/favorite', favoriteRoute)
 // app.use(express.static('client/build'))
 
-
-
 // app.get('*', (req,res) => {
 //     res.sendFile(path.join(__dirname, '/client/build', 'index.html'))
 // })
