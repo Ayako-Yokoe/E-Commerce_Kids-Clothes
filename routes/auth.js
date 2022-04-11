@@ -26,6 +26,7 @@ router.post('/register', async (req,res) => {
 
 // Log in
 router.post('/login', async (req,res) => {
+    console.log('/login', req.body)
     try {
         const user = await User.findOne({ username: req.body.username })
         !user && res.status(401).json('Wrong Username')
