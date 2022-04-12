@@ -1,105 +1,38 @@
 import { useState, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useLocation, Link } from'react-router-dom';
-import { updateProduct } from '../redux/apiCalls';
-import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import app from'../firebase';
-import AdminNavbar from '../adminComponents/AdminNavbar';
+import { 
+  getStorage, 
+  ref, 
+  uploadBytesResumable, 
+  getDownloadURL 
+} from "firebase/storage";
 import Button from '@mui/material/Button';
 import UploadFileIcon from '@mui/icons-material/UploadFile';
-import styled from 'styled-components';
-import { mobile } from '../responsive';
+import app from'../firebase';
+import AdminNavbar from '../adminComponents/AdminNavbar';
+import { updateProduct } from '../redux/apiCalls';
+import {
+  Container,
+  Heading,
+  CreateNewButton,
+  ProductDetail,
+  Left,
+  ProductImage,
+  ProductTitle,
+  ProductId,
+  ID,
+  Right,
+  FormDetail,
+  FormCenter,
+  FormRight,
+  FormLabel,
+  FormInput,
+  InStock,
+  UploadFile,
+  Space
+} from './AdminProduct.styles';
 
-
-const Container = styled.div``
-
-const Heading = styled.h2`
-    background-color: #f6e9d7;
-    padding: 0.5em;
-    font-size: 28px;
-    font-weight: 500;
-    ${mobile({ fontSize: 20 })}
-`
-const CreateNewButton = styled.button`
-    font-size: 16px;
-    padding: 0.3rem 0.5rem;
-    margin: 1rem;
-    background-color: #fff;
-    border: 1px solid var(--gray);
-    transition: all 0.2s ease-in-out;
-
-    &:hover {
-      cursor: pointer;
-        background-color: var(--gray);
-        color: #fff;
-        border: 1px solid var(--gray);
-    }
-`
-const ProductDetail = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 0 auto;
-    padding: 1rem;
-    height: auto;
-    width: 70%;
-    background-color: #fff;
-    ${mobile({ flexDirection: 'column' })}
-`
-const Left = styled.div`
-    flex: 1;
-    height: auto;
-    ${mobile({ margin: '0 0 15px 0' })}
-`
-const ProductImage = styled.img`
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    max-width: 300px;
-`
-const ProductTitle = styled.p`
-    font-size: 20px;
-`
-const ProductId = styled.p`
-    font-size: 12px;
-`
-const ID = styled.span`
-    font-size: 10px;
-`
-const Right = styled.div`
-    flex: 1;
-    height: auto;
-    margin-left: 20px;
-`
-const FormDetail = styled.div`
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-`
-const FormCenter = styled.div`
-    flex: 1;
-`
-const FormRight = styled.div`
-    flex: 1;
-`
-const FormLabel = styled.label`
-    font-size: 16px;
-`
-const FormInput = styled.input`
-    padding: 0.3rem;
-    margin-bottom: 0.3rem;
-    font-size: 16px;
-`
-const InStock = styled.select`
-    font-size: 16px;
-    padding: 0.3rem;
-    margin-bottom: 1.5rem;
-`
-const UploadFile = styled.div`
-`
-const Space = styled.div`
-  margin: 0.5em 0;  
-`
 
 const AdminProduct = () => {
     const location = useLocation()

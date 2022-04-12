@@ -1,31 +1,15 @@
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { deleteProduct } from '../redux/apiCalls';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import styled from 'styled-components';
+import { deleteProduct } from '../redux/apiCalls';
+import {
+    Detail,
+    Button
+} from './AdminProductCard.styles';
 
-
-const Detail = styled.span`
-    color: var(--gray);
-`
-const Button = styled.button`
-    font-size: 16px;
-    padding: 0.3rem 0.5rem;
-    margin: 10px 5px 0 0;
-    background-color: #fff;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
-
-    &:hover {
-        cursor: pointer;
-        background-color: var(--gray);
-        color: #fff;
-        border: 1px solid var(--gray);
-    }
-`
 
 const AdminProductCard = (props) => {
     const navigate = useNavigate()

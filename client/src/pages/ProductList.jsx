@@ -5,48 +5,18 @@ import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
 import Products from '../components/Products';
-import styled from 'styled-components';
-import { mobile } from '../responsive';
+import {
+  Container,
+  Title,
+  FilterContainer,
+  Filter,
+  FilterText,
+  Left,
+  Select,
+  Right,
+  Option
+} from './ProductList.styles';
 
-
-const Container = styled.div``
-
-const Title = styled.h1`
-    font-size: 36px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin: 20px 30px;
-    ${mobile({ fontSize: 26 })}
-`
-const FilterContainer = styled.div`
-    display: flex;
-    justify-content: space-between;
-    ${mobile({ justifyContent: 'flex-start' })}
-`
-const Filter = styled.div`
-    margin: 20px 30px;
-    flex: 1;
-    ${mobile({ display: 'flex', flexDirection: 'column', margin: '0 0 0 30px' })}
-`
-const FilterText = styled.span`
-    font-size: 20px;
-    font-weight: 500;
-    margin-right: 20px;
-    ${mobile({ marginRight: 0, fontSize: 16 })}
-`
-const Left = styled.div`
-  ${mobile({ display: 'flex', flexDirection: 'row' })}
-`
-const Select = styled.select`
-    padding: 10px;
-    margin: 10px 20px 0 0;
-    width: 40%;
-    ${mobile({ margin : '10px 10px 0 0', padding: 5, width: '90%' })}
-`
-const Right = styled.div`
-`
-const Option = styled.option`
-`
 
 const ProductList = () => {
   const location = useLocation()

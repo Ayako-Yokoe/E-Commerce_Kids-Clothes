@@ -3,27 +3,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getProducts } from '../redux/apiCalls';
 import AdminNavbar from '../adminComponents/AdminNavbar';
 import AdminProductCard from '../adminComponents/AdminProductCard';
-import styled from 'styled-components';
-import { mobile } from '../responsive';
+import {
+    Container,
+    Heading,
+    ProductListCard
+} from './AdminProductList.styles';
 
-
-const Container = styled.div``
-
-const Heading = styled.h2`
-    background-color: #f6e9d7;
-    padding: 0.5em;
-    font-size: 28px;
-    font-weight: 500;
-    ${mobile({ fontSize: 20 })}
-`
-const ProductListCard = styled.div`
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 80%;
-    margin: 10px auto;
-    ${mobile({ flexDirection: 'column' })}
-`
 
 const AdminProductList = () => {
     const dispatch = useDispatch()

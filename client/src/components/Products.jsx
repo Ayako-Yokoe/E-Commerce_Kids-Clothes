@@ -1,15 +1,8 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Product from './Product';
-import styled from 'styled-components';
+import { Container } from './Products.styles';
 
-
-const Container = styled.div`
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-`
 
 const Products = ({ category, filters, sort }) => { 
   const [products, setProducts] = useState([])

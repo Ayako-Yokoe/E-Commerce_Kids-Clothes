@@ -1,52 +1,30 @@
 import { useState, useCallback } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from'react-router-dom';
-import { addProduct } from "../redux/apiCalls";
-import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import app from '../firebase';
-import AdminNavbar from '../adminComponents/AdminNavbar';
+import { 
+    getStorage, 
+    ref, 
+    uploadBytesResumable, 
+    getDownloadURL 
+} from "firebase/storage";
 import TextField from '@mui/material/TextField';
 import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import Button from '@mui/material/Button';
-import styled from 'styled-components';
-import { mobile } from '../responsive';
-
-
-const Container = styled.div`
-    width: 50%;
-    margin: 4rem auto;
-    padding: 1rem;
-    height: auto;
-    background-color: #fff;
-    ${mobile({ width: '80%', margin: '2rem auto' })}
-`
-const Heading = styled.div`
-    background-color: #f6e9d7;
-    padding: 0.4em 0.5em;
-    text-align: center;
-    font-size: 20px;
-    ${mobile({ fontSize: 14 })}
-`
-const Form = styled.form`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 1em;
-`
-const Space = styled.div`
-    margin: 0.5em 0;
-`
-const ImageTitle = styled.p`
-    font-size: 18px;
-    letter-spacing: 2px;
-    padding: 0.5rem 0;
-    ${mobile({ fontSize: 14 })}
-`
-const ImageLabel = styled.label``
-const ImageInput = styled.input``
+import app from '../firebase';
+import AdminNavbar from '../adminComponents/AdminNavbar';
+import { addProduct } from "../redux/apiCalls";
+import {
+    Container,
+    Heading,
+    Form,
+    Space,
+    ImageTitle,
+    ImageLabel,
+    ImageInput
+} from './AdminNewProduct.styles';
 
 
 const AdminNewProduct = () => {

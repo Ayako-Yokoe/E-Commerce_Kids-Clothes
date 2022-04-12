@@ -1,15 +1,7 @@
 import CategoryItem from './CategoryItem';
 import { categories } from '../data';
-import styled from 'styled-components';
-import { mobile } from '../responsive';
+import { Container } from './Categories.styles';
 
-
-const Container = styled.div`
-  display: flex;
-  padding: 20px;
-  justify-content: space-between;
-  ${mobile({ padding: 0, flexDirection: 'column'})}
-`
 
 const Categories = () => {
   return (

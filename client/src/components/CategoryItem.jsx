@@ -1,53 +1,12 @@
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-import { mobile } from '../responsive';
+import {
+  Container,
+  Image,
+  Info,
+  Title,
+  Button
+} from './CategoryItem.styles';
 
-
-const Container = styled.div`
-    flex: 1;
-    margin: 3px;
-    height: 70vh;
-    position: relative;
-`
-const Image = styled.img`
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    ${mobile({ height: '20vh'})}
-`
-const Info = styled.div`
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-`
-const Title = styled.h1`
-    color: #fff;
-    margin-bottom: 20px;
-    font-size: 30px;
-    font-weight: 500;
-    ${mobile({ fontSize: 24 })}
-`
-const Button = styled.button`
-    border: none;
-    padding: 10px;
-    background-color: #fff;
-    color: gray;
-    cursor: pointer;
-    font-weight: 700;
-
-    &:hover {
-      background-color: transparent;
-      color: #fff;
-      transition: all 0.3s ease;
-  }
-`
 
 const CategoryItem = ({item}) => {
   return (

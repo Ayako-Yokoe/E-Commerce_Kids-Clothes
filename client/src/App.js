@@ -46,6 +46,8 @@ function App() {
         <Route path='/adminlogin' element={<AdminLogin />} />
         <Route path='/adminregister' element={<AdminRegister />} />
 
+        <Route path="*" element={<h1>Error 404</h1>} />
+
       </Routes>
     </BrowserRouter>
   );
