@@ -1,10 +1,9 @@
-import { css } from 'styled-components'
+import { css } from "styled-components"
 
 export const mobile = (props) => {
-    return css`
+  return css`
     @media (max-width: 475px) {
-        ${props}
+      ${props}
     }
   `
 }
-

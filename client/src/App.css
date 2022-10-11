@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Griffy&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Griffy&display=swap");
 
 :root {
   --orange: #ef9273;
@@ -18,7 +17,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   background-color: #fef9f8;
   color: #0d0d0d;
 }
@@ -26,5 +25,3 @@ img {
   width: 100%;
   height: auto;
 }
-
-
