@@ -57,5 +57,5 @@ export const Hamburgermenu = styled.div`
 `
 export const FavoriteIcon = styled.div`
   color: ${(props) => (props.length > 0 ? "red" : "#000")};
-  margin: 0 10px;
+  margin: 5px 10px 0 10px;
 `

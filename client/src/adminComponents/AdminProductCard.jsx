@@ -40,11 +40,12 @@ const AdminProductCard = (props) => {
               <Detail>Size:</Detail> {props.size}
             </Typography>
             <Typography style={{ fontSize: 16 }}>
-              {props.colors?.map((color) => (
-                <span key={color}>
-                  <Detail>Colors:</Detail> {color}
-                </span>
-              ))}
+              {props.colors &&
+                props.colors.map((color) => (
+                  <span key={color}>
+                    <Detail>Colors:</Detail> {color}
+                  </span>
+                ))}
             </Typography>
             <Typography style={{ fontSize: 16 }}>
               <Detail>Price:</Detail> ${props.price}

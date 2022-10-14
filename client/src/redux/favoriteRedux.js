@@ -8,8 +8,8 @@ const favoriteSlice = createSlice({
   },
   reducers: {
     addFavorite: (state, action) => {
-      state.quantity += 1
       state.products.push(action.payload)
+      state.quantity = state.products.length
     },
     deleteFavorite: (state, action) => {
       state.products.splice(
@@ -18,11 +18,7 @@ const favoriteSlice = createSlice({
         ),
         1
       )
-
-      if (state.quantity > 0) {
-        state.quantity -= 1
-      }
-      state.quantity = state.quantity
+      state.quantity = state.products.length
     },
   },
 })
