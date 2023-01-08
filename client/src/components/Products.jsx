@@ -12,8 +12,8 @@ const Products = ({ category, filters, sort }) => {
       try {
         const res = await axios.get(
           category
-            ? `https://ecommerce-kids-clothes.herokuapp.com/api/products?category=${category}`
-            : "https://ecommerce-kids-clothes.herokuapp.com/api/products"
+            ? `https://kids-clothes.vercel.app/api/products?category=${category}`
+            : "https://kids-clothes.vercel.app/api/products"
         )
         setProducts(res.data)
       } catch (err) {}
