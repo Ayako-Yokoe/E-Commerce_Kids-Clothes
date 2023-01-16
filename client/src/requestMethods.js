@@ -2,6 +2,7 @@ import axios from "axios"
 
 // const BASE_URL = "https://ecommerce-kids-clothes.herokuapp.com/api"
 const BASE_URL = "https://kids-clothes.vercel.app/api"
+// const BASE_URL = "https://localhost:8000/api"
 
 const user =
   JSON.parse(localStorage.getItem("persist:root")) &&
