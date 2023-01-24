@@ -11,12 +11,14 @@ const orderRoute = require("./routes/order")
 const stripeRoute = require("./routes/stripe")
 const favoriteRoute = require("./routes/favorite")
 const path = require("path")
+const nocache = require("nocache")
 
 mongoose
   .connect(process.env.MONGO_URL)
   .then(() => console.log("DB connection successessful"))
   .catch((err) => console.log(err))
 
+app.use(nocache())
 app.use(cors())
 app.use(express.json())
 app.use("/api/auth", authRoute)
