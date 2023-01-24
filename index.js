@@ -1,5 +1,6 @@
 const express = require("express")
 const app = express()
+const cors = require("cors")
 const mongoose = require("mongoose")
 const dotenv = require("dotenv").config()
 const authRoute = require("./routes/auth")
@@ -9,7 +10,6 @@ const cartRoute = require("./routes/cart")
 const orderRoute = require("./routes/order")
 const stripeRoute = require("./routes/stripe")
 const favoriteRoute = require("./routes/favorite")
-const cors = require("cors")
 const path = require("path")
 
 mongoose
